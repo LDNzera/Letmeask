@@ -22,6 +22,7 @@ export function NewRoom() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask logo." />
+          <div className="separator-full" />
           <h2>Crie uma nova sala</h2>
           <form>
             <input 

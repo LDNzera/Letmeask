@@ -4,7 +4,7 @@
   height: 50px;
   border-radius: 8px;
   font-weight: 500;
-  background: #835afd;
+  background: var(--color-purple);
   color: #FFF;
   padding: 0 32px;
 
@@ -15,14 +15,14 @@
   cursor: pointer;
   border: 0;
 
-  transition: filter 0.2s;
+  transition: background 0.2s;
 
   img {
     margin-right: 8px;
   }
 
   &:not(:disabled):hover {
-    filter: brightness(0.9)
+    background: var(--color-purple-hover);
   }
 
   &:disabled {
