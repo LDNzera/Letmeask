@@ -1,15 +1,15 @@
 import { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
-import { Button } from '../components/Button';
+import { database } from '../../services/firebase';
+import { useAuth } from '../../hooks/useAuth';
 
-import { database } from '../services/firebase';
-import { useAuth } from '../hooks/useAuth';
+import { Button } from '../../components/Button/index';
+import { LogoButton } from '../../components/LogoButton';
 
-import illustrationImg from '../assets/illustration.svg';
-import logoImg from '../assets/logo.svg';
+import illustrationImg from '../../assets/illustration.svg';
 
-import '../styles/auth.scss';
+import './styles.scss';
 
 export function NewRoom() {
   const { user } = useAuth();
@@ -35,7 +35,7 @@ export function NewRoom() {
   }
 
   return (
-    <div id="page-auth">
+    <div id="page-new-room">
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas." />
         <strong>Toda pergunta tem uma resposta</strong>
@@ -43,7 +43,9 @@ export function NewRoom() {
       </aside>
       <main>
         <div className="main-content">
-          <img src={logoImg} alt="Letmeask logo." />
+          <div className="logo-button">
+            <LogoButton />
+          </div>
           <div className="separator-full" />
           <h2>Crie uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
