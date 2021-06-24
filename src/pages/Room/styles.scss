@@ -49,9 +49,11 @@
         padding: 16px;
         border-radius: 8px;
         background: #FEFEFE;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
         resize: vertical;
         min-height: 130px;
+
+        outline-color: #835AFD;
       }
 
       .form-footer {
